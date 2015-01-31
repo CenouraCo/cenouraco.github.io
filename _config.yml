@@ -13,4 +13,4 @@ highlighter: pygments
 permalink: /:title/
 
 # Exclude development-only stuff
-exclude: ['package.json', 'bower.json', 'bower_components', 'node_modules', 'src']
+exclude: ['package.json', 'bower.json', 'bower_components', 'node_modules', 'src', 'CNAME', 'README.md', 'LICENSE']
