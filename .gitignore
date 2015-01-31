@@ -128,7 +128,6 @@ target/
 ### Jekyll ###
 _site/
 .sass-cache/
-assets
 
 ### SublimeText ###
 # cache files for sublime text
