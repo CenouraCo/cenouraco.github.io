@@ -8,9 +8,15 @@ url: "http://cenoura.co" # the base hostname & protocol for your site
 github_username: grvcoelho
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
 permalink: /:title/
+
+# Disqus shortname
+disqus: cenoura.co
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-59205016-1
 
 # Exclude development-only stuff
 exclude: ['package.json', 'bower.json', 'bower_components', 'node_modules', 'src', 'CNAME', 'README.md', 'LICENSE']
