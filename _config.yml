@@ -1,0 +1,16 @@
+# Site settings
+title: Cenoura
+email: guilherme@cenoura.co
+description: > # this means to ignore newlines until "baseurl:"
+  Insights sobre desenvolvimento web e front-end.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://cenoura.co" # the base hostname & protocol for your site
+github_username: grvcoelho
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: /:title/
+
+# Exclude development-only stuff
+exclude: ['package.json', 'bower.json', 'bower_components', 'node_modules', 'src']
