@@ -1,0 +1,2 @@
+console.info("hey");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOlsiY29uc29sZSIsImluZm8iXSwibWFwcGluZ3MiOiJBQUFBQSxRQUFBQyxLQUFBIiwiZmlsZSI6Im1haW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zb2xlLmluZm8oJ2hleScpOyJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
