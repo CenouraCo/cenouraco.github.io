@@ -19,4 +19,4 @@ disqus: cenoura.co
 google_analytics: UA-59205016-1
 
 # Exclude development-only stuff
-exclude: ['package.json', 'bower.json', 'bower_components', 'node_modules', 'src', 'CNAME', 'README.md', 'LICENSE']
+exclude: ['package.json', 'bower.json', 'bower_components', 'node_modules', 'src', 'CNAME', 'README.md', 'LICENSE', '_drafts']

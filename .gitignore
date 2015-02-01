@@ -127,6 +127,7 @@ target/
 
 ### Jekyll ###
 _site/
+_drafts/
 .sass-cache/
 
 ### SublimeText ###
