@@ -1,0 +1,14 @@
+.offcanvas
+  size rem(300px) 100%
+  position fixed
+  top 0
+  z-index 4
+  background accent
+  box-shadow shadow-z2
+  transform translate(-300px)
+  transition transform .2s $transition-bezier;
+  
+  &--open
+    @extend .offcanvas
+    transform translate(0px)
+    transition transform .2s $transition-bezier;

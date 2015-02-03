@@ -81,7 +81,7 @@ gulp.task('scripts', function() {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('_site/assets/js/'))
     .pipe(reload({stream: true}))
