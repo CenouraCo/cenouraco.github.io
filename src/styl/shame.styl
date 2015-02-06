@@ -1,46 +1,51 @@
-// .header
-//   @extend .clearfix
-//   padding-top rem(20px)
-//   height 50vh
-//   text-align center
+.test
+  cf()
+  position fixed
+  top 0
+  padding rem(150px)
+  size 100% 100vh
+  background rgba(255,255,255,.92)
+  text-align center
+  // background-image linear-gradient(-45deg, primary, green)
+  background-image linear-gradient(-45deg, red-500, deep-orange-a200)
   
-// .header__line
-//   size 100% 5px
-//   position absolute
-//   top 0
-//   background accent
+.test__logo
+  cf()
+  position relative
+  top 11px
+  margin 0 auto
+  display inline-block
+  display none
+  size rem(100px)
   
-// .header__name
-//   padding 0 rem(16px)
-//   font 300 rem(60px) font-family-brand
-//   text-transform uppercase
-//   color black-text
+.test__superlogo
   
-// .header__icon
-//   position relative
-//   top 12px
-//   size rem(70px)
-//   transform rotate(270deg)
   
-// .header__icon--left
-//   @extend .header__icon
-//   transform rotate(90deg)
-    
-// .header__brand *
-//   display inline-block
+.test__name
+  // display inline-block
+  font 900 rem(90px) font-family-brand
+  font 400 rem(90px) font-family-cursive
+  // text-transform uppercase
+  color white
+  
+.test__tagline
+  font italic 300 rem(40px) font-family-serif
+  color white
+  
+  background red
 
-// .header__tagline
-//   font 100 rem(25px) font-family-sans
+.header__menu-toggle
+  padding rem(7px)
+  margin-top 15px
+  float right
+  size rem(50px)
+  border 3px solid black
+  border-radius 50%
+  fill black
   
-// .header__menu-button
-//   position absolute
-//   left 5%
-//   size rem(48px)
-//   padding rem(5px)
-//   border-radius 50%
-//   border 4px solid primary
-//   fill primary
-//   &:hover
-//     cursor pointer
-//     background primary
-//     fill white
+  &:hover
+    background black
+    cursor pointer
+    fill white
+    border-color white
+  

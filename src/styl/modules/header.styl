@@ -1,61 +1,41 @@
 .header
   cf()
-  height 100vh
-  text-align center
-  background white
-  background url(http://qbkl.net/themeforest/curriculum/assets/img/backstretch.jpg)
-  
-.header__line
-  width 100%
-  height rem(3px)
   position fixed
-  background primary
+  top 0
+  padding rem(10px)
+  size 100% 100vh
+  background rgba(255,255,255,.92)
+  text-align center
+  background-image linear-gradient(-45deg, primary, green)
+  background-image linear-gradient(-45deg, deep-orange, orange)
   
 .header__logo
-  margin-top rem(50px)
+  cf()
+  position relative
+  margin 0 auto
+  display inline-block
+  size rem(80px)
   
 .header__name
-  margin-top rem(10px)
-  font 800 rem(60px) font-family-sans
-  text-transform uppercase
-  letter-spacing .5rem
-  line-height 6rem
-  color white
+  display inline-block
+  float left
+  font 400 rem(24px) font-family-sans
+  text-align left
+  line-height rem(70px)
+
+.header__menu-toggle
+  padding rem(7px)
+  margin-top 15px
+  float right
+  size rem(50px)
+  border 3px solid black
+  border-radius 50%
+  fill black
   
-.header__separator
-  width rem(300px)
-  height rem(2px)
-  display block
-  margin 0 auto
-  background white
+  &:hover
+    background black
+    cursor pointer
+    fill white
+    border-color white
   
-.header__motto
-  font 300 rem(30px) font-family-sans
-  line-height 5rem
-  color white
   
-.main-menu
-  width 100%
-  height rem(60px)
-  margin-top rem(-60px)
-  background primary
-  text-align center
-  
-  ul
-    margin 0
-    list-style none
-    
-  li
-    padding-left 20px
-    line-height rem(60px)
-    display inline-block
-    
-  a
-    line-height rem(60px)
-    font 500 rem(15px) font-family-sans
-    letter-spacing rem(1.5px)
-    text-transform uppercase
-    color white
-    
-    &:hover
-      color white-secondary-text
