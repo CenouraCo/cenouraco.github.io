@@ -2,7 +2,7 @@
   cf()
   position fixed
   top 0
-  padding rem(150px)
+  // padding rem(150px)
   size 100% 100vh
   background rgba(255,255,255,.92)
   text-align center
@@ -18,7 +18,26 @@
   display none
   size rem(100px)
   
-.test__superlogo
+.test__holder
+  cf()
+  position relative
+  top 50%
+  transform translateY(-50%)
+  
+.test__menu-toggle
+  padding rem(7px)
+  margin 30px
+  position absolute
+  right 0
+  size rem(50px)
+  border 3px solid white
+  border-radius 50%
+  fill white
+  
+  &:hover
+    cursor pointer
+    background white
+    fill black
   
   
 .test__name
