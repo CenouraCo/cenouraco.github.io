@@ -1,6 +1,6 @@
 .post-item
   cf()
-  col(1/3)
+  col(1/1)
   padding rem(70px) 0
   
 .post-item__title
@@ -34,14 +34,14 @@
   font-weight 300
   color black-text
   
+.post-item__separator
+  border-color grey-300  
 
 .post-item__read-more
-  text-align center
+  text-align right
   a
     background-clip padding-box
     border-radius 100px
-    border 2px solid #d0d0d0
-    color #bfbfbf
     display inline-block
     font-size .85rem
     font-weight 700
@@ -50,9 +50,23 @@
     line-height 1em
     padding 1rem 3rem
     text-transform uppercase
-    background-color rgba(255,255,255,0)
+    
+
+    border-color transparent
+    background-image linear-gradient(-108deg, accent, green)
+    color white
     &:hover
       background-image linear-gradient(-108deg, red, deep-orange)
       border-color transparent
       color white
-  
+      transition all .5s linear
+
+.post-item__tags
+  @extend .post-item__read-more
+  text-align left
+  a
+    background rgba(255,255,255,0)
+    padding .5rem 1.5rem
+    color #bfbfbf
+    border 2px solid #d0d0d0
+    
