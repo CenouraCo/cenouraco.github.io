@@ -1,41 +1,59 @@
 .header
   cf()
-  position fixed
-  top 0
-  padding rem(10px)
   size 100% 100vh
-  background rgba(255,255,255,.92)
   text-align center
-  background-image linear-gradient(-45deg, primary, green)
-  background-image linear-gradient(-45deg, deep-orange, orange)
+  background-image linear-gradient(-45deg, red-500, deep-orange-a200)
   
-.header__logo
-  cf()
-  position relative
-  margin 0 auto
-  display inline-block
-  size rem(80px)
-  
-.header__name
-  display inline-block
-  float left
-  font 400 rem(24px) font-family-sans
-  text-align left
-  line-height rem(70px)
-
 .header__menu-toggle
+  position absolute
+  right 0
+  margin rem(30px)
   padding rem(7px)
-  margin-top 15px
-  float right
   size rem(50px)
-  border 3px solid black
+  border 3px solid white
   border-radius 50%
-  fill black
+  fill white
   
   &:hover
-    background black
+    background white
     cursor pointer
-    fill white
-    border-color white
+    fill black
   
+.header__brand
+  cf()
+  position relative
+  top 50%
+  transform translateY(-50%)
+
+.header__logo
+  padding 20px
+  size rem(130px)
+  border rem(6px) solid white
+  border-radius 50%
+  +above('md')
+    size rem(140px)
+    border-width rem(7px)
+    
+  &:hover
+    background white
+    cursor pointer
+    
+    .header__logo__icon--light
+      display none
+      
+    .header__logo__icon--normal
+      display block
+
+.header__logo__icon--light
+  display block
   
+.header__logo__icon--normal
+  display none
+  
+.header__name
+  font-size rem(60px)
+  font-family font-family-cursive
+  font-weight 500
+  color white
+  +above('md')
+    font-size rem(70px)
