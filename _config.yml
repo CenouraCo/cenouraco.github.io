@@ -8,8 +8,8 @@ url: "http://cenoura.co" # the base hostname & protocol for your site
 github_username: grvcoelho
 
 # Build settings
-markdown: redcarpet
-highlighter: Pygments
+markdown: kramdown
+highlighter: pygments
 permalink: /:title/
 
 # Disqus shortname

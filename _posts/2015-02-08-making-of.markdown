@@ -7,6 +7,15 @@ tags:
 - gulp
 - stylus
 - github pages
+- js
+- css
+- stylus
+- do it yourself
+- omg
+- lol
+- haha
+- <3
+- ❤
 ---
 
 ## Introdução
@@ -17,7 +26,65 @@ Se você quiser pular todo o blá blá blá e ver só o [código fonte](https://
 
 **Aviso! Este post é bastante extenso, vai lá pegar seu café esperto e volta!**
 
-![Uma xícara de café com a espuma fazendo um desenho de um gato fofinho](/assets/img/making-of-parte-2/cafe-de-gato.jpg)
+![Uma xícara de café com a espuma fazendo um desenho de um gato fofinho](http://willianjusten.com.br/assets/img/making-of-parte-2/cafe-de-gato.jpg)
+
+{% highlight ruby %}
+
+(function(angular, undefined) {
+  
+  'use strict';
+
+  angular
+    .module('paper.components.paper-dialog')
+    .controller('paperDialogController', paperDialogController);
+
+  paperDialogController.$inject = ['$scope', '$element', '$attrs', '$log', '$paperDialog', '$paperBackdrop'];
+
+  /**
+   * The paper dialog controller.
+   * 
+   * @ngdoc controller
+   * @name  paperDialogController
+   * @requires $scope
+   * @requires $window
+   * @requires $element
+   * @requires $attrs
+   * @requires $timeout
+   * @requires $log
+   */
+  function paperDialogController($scope, $element, $attrs, $log, $paperDialog, $paperBackdrop) {
+    if(typeof $attrs.open !== 'undefined') {
+      $scope.open = true;
+    }
+
+    if(typeof $attrs.heading !== 'undefined') {
+      $scope.heading = $attrs.heading;
+    }
+
+    if(typeof $attrs.id !== 'undefined') {
+      $scope.id = $attrs.id;
+    }      
+
+    if(typeof $attrs.closeable !== 'undefined') {
+      $scope.closeable = $attrs.closeable;
+    }      
+
+    $scope.open = false;
+    $paperDialog.add($scope);
+
+    $scope.closeDialog = function(target) {
+      $paperDialog.close(target);
+    }
+
+    $scope.closeAll = function() {
+      $paperDialog.closeAll();
+    }
+  }
+  
+})(angular);
+
+{% endhighlight %}
+
 
 ### Instalando o Jekyll
 

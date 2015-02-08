@@ -2,11 +2,10 @@
 layout: default
 ---
 <article class="article">
-  <a href="{{ page.url | prepend: site.baseurl}}" class="article__datetime"></a>
 
   <div class="article__information">
     <h2 class="article__title" itemprop="name">
-      <a href="{{ page.url | prepend: site.baseurl }}">
+      <a id="inicio" name="inicio" href="{{ page.url | prepend: site.baseurl }}">
         {{ page.title }}
       </a>
     </h2>
@@ -18,16 +17,14 @@ layout: default
       {{ content }}
     </div>
 
-    <div class="article__read-more">
-      <a href="{{ page.url | prepend: site.baseurl }}">Continue lendo</a>
-    </div>
+    <div class="container">
+      <hr class="article__separator">
 
-    <hr class="article__separator">
-
-    <div class="article__tags">
-      {% for tag in page.tags %}
-        <a href="/tags/#{{tag}}">{{ tag }}</a>
-      {% endfor %}
+      <div class="article__tags">
+        {% for tag in page.tags %}
+          <a href="/tags/#{{tag}}">{{ tag }}</a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </article>

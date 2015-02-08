@@ -48,8 +48,7 @@
     letter-spacing 1px
     line-height 1em
     padding 1rem 3rem
-    text-transform uppercase
-    
+    text-transform uppercase   
 
     border-color transparent
     background-image linear-gradient(-108deg, accent, green)
@@ -63,15 +62,22 @@
   @extend .article__read-more
   text-align left
   a
+    outline 0
+    margin-bottom 7px
     background rgba(255,255,255,0)
     padding .5rem 1.5rem
     color #bfbfbf
     border 2px solid #d0d0d0
+    &:focus
+      outline 0
     
 .article__content
   h1
   h2
   h3
+  h4
+  h5
+  h6
     @extend .container
     margin-top 2rem
     margin-bottom 1.4rem
@@ -81,13 +87,22 @@
     font-size 2rem
     
   h3
+    font-size 1.75rem
+    
+  h4
     font-size 1.6rem
+    
+  h5
+    font-size 1.45rem
+  
+  h6
+    font-size 1.35rem
 
   p
     @extend .container
-    margin-bottom 1rem
+    margin-bottom 1.25rem
     font-family font-family-sans
-    font-size 1.35rem
+    font-size 1.3rem
     font-weight 300
     line-height 2.4rem
     color black-text
@@ -95,11 +110,28 @@
   a
     text-decoration underline
     
-  // code
-  //   color deep-orange
-    
+  code
+    color deep-orange
+        
   pre
     width 100%
+    margin 1.5rem 0
+    padding 2.5rem
+    background #2d2d2d
+    color grey-50
     
     > code
       @extend .container
+      color grey-50
+      
+  ul
+    @extend .container
+    @extend .article__content p
+    padding-left 1.5rem
+    
+    li
+      padding-bottom 0.5rem
+      
+  img
+    margin 1.875rem auto
+    display block
