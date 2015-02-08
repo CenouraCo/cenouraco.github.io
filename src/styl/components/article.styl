@@ -1,0 +1,105 @@
+.article
+  padding rem(70px) 0
+  
+.article__title
+  @extend .container
+  margin 0 auto
+  font-size 2.375rem
+  a
+    color black-text
+    text-decoration none
+    &:hover
+      color deep-orange
+    
+.article__date
+  @extend .container
+  margin-top .65rem
+  margin-bottom .65rem
+  display block
+  font-size rem(14px)
+  font-family font-family-serif
+  font-style italic
+  font-weight 500
+  color deep-orange
+  
+  &:after
+    content ''
+    position relative
+    left rem(5px)
+    bottom rem(3px)
+    display inline-block
+    width rem(100px)
+    height rem(2px)
+    background deep-orange
+    
+  
+.article__separator
+  border-color grey-300  
+
+.article__read-more
+  text-align right
+  a
+    background-clip padding-box
+    border-radius 100px
+    display inline-block
+    font-size .85rem
+    font-weight 700
+    font-family font-family-sans
+    letter-spacing 1px
+    line-height 1em
+    padding 1rem 3rem
+    text-transform uppercase
+    
+
+    border-color transparent
+    background-image linear-gradient(-108deg, accent, green)
+    color white
+    &:hover
+      background-image linear-gradient(-108deg, red, deep-orange)
+      border-color transparent
+      color white
+
+.article__tags
+  @extend .article__read-more
+  text-align left
+  a
+    background rgba(255,255,255,0)
+    padding .5rem 1.5rem
+    color #bfbfbf
+    border 2px solid #d0d0d0
+    
+.article__content
+  h1
+  h2
+  h3
+    @extend .container
+    margin-top 2rem
+    margin-bottom 1.4rem
+    font-weight 700
+    
+  h2
+    font-size 2rem
+    
+  h3
+    font-size 1.6rem
+
+  p
+    @extend .container
+    margin-bottom 1rem
+    font-family font-family-sans
+    font-size 1.35rem
+    font-weight 300
+    line-height 2.4rem
+    color black-text
+    
+  a
+    text-decoration underline
+    
+  // code
+  //   color deep-orange
+    
+  pre
+    width 100%
+    
+    > code
+      @extend .container

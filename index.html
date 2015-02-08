@@ -2,31 +2,31 @@
 layout: default
 ---
 
-<main class="container">
+<main>
   {% for post in site.posts %}
-    <article class="post-item">
-      <a href="{{ post.url | prepend: site.baseurl}}" class="post-item__datetime">
+    <article class="article">
+      <a href="{{ post.url | prepend: site.baseurl}}" class="article__datetime">
       </a>
 
-      <div class="post-item__content">
+      <div class="article__content">
         <a href="{{ post.url | prepend: site.baseurl }}">
-          <h2 class="post-item__title" itemprop="name">{{ post.title }}</h2>
+          <h2 class="article__title" itemprop="name">{{ post.title }}</h2>
         </a>
-        <time class="post-item__date" datetime="{{ post.date | date_to_xmlschema }}">
+        <time class="article__date" datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date: "%d %b %Y" }}
         </time>
 
-        <p class="post-item__description">
+        <p class="article__content">
           {{ post.content | strip_html | truncatewords:50 }}
         </p>
 
-        <div class="post-item__read-more">
+        <div class="article__read-more">
           <a href="{{ post.url | prepend: site.baseurl }}">Continue lendo</a>
         </div>
 
-        <hr class="post-item__separator">
+        <hr class="article__separator">
 
-        <div class="post-item__tags">
+        <div class="article__tags">
           {% for tag in post.tags %}
             <a href="/tags/#{{tag}}">{{ tag }}</a>
           {% endfor %}

@@ -9,7 +9,7 @@ github_username: grvcoelho
 
 # Build settings
 markdown: redcarpet
-highlighter: pygments
+highlighter: Pygments
 permalink: /:title/
 
 # Disqus shortname
