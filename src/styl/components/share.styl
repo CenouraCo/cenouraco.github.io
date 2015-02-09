@@ -1,0 +1,44 @@
+.share
+  @extend .container
+  margin-top 2.5rem
+  margin-bottom 3rem
+  text-align center
+  
+  a
+    background-clip padding-box
+    border 2px solid transparent
+    border-radius rem(100px)
+    display inline-block
+    font-size .85rem
+    font-weight 700
+    font-family font-family-sans
+    letter-spacing 1px
+    line-height 1em
+    padding .75rem 2rem
+    text-transform uppercase   
+    color white
+    &:hover
+      background-image linear-gradient(-108deg, red, deep-orange)
+      border-color transparent
+      color white
+      
+  .share__twitter
+    border-color transparent
+    color white
+    background-image linear-gradient(-108deg, darken(#53abee, 15%), #53abee)
+    &:hover
+      background-image linear-gradient(-108deg, #53abee, darken(#53abee, 15%))
+
+  .share__facebook
+    border-color transparent
+    color white
+    background-image linear-gradient(-108deg, darken(#3b5998, 15%), #3b5998)
+    &:hover
+      background-image linear-gradient(-108deg, #3b5998, darken(#3b5998, 15%))
+
+  .share__google
+    border-color transparent
+    color white
+    background-image linear-gradient(-108deg, darken(#dc4335, 15%), #dc4335)
+    &:hover
+      background-image linear-gradient(-108deg, #dc4335, darken(#dc4335, 15%))

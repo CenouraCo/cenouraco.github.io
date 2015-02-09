@@ -16,9 +16,10 @@ layout: default
     <div class="article__content">
       {{ content }}
     </div>
-
+    
     <div class="container">
-      <hr class="article__separator">
+
+      <hr>
 
       <div class="article__tags">
         {% for tag in page.tags %}
@@ -26,5 +27,13 @@ layout: default
         {% endfor %}
       </div>
     </div>
+
+    <div class="article__separator">
+      <svg class="article__separator__logo"><use xlink:href="#icon-cenoura-light"></use></svg>
+    </div>
+
+    {% include share.html%}
+
+    {% include disqus.html%}
   </div>
 </article>

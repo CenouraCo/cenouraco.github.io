@@ -1,6 +1,6 @@
 .article
   padding rem(70px) 0
-  
+    
 .article__title
   @extend .container
   margin 0 auto
@@ -33,14 +33,11 @@
     background deep-orange
     
   
-.article__separator
-  border-color grey-300  
-
 .article__read-more
   text-align right
   a
     background-clip padding-box
-    border-radius 100px
+    border-radius rem(100px)
     display inline-block
     font-size .85rem
     font-weight 700
@@ -70,6 +67,32 @@
     border 2px solid #d0d0d0
     &:focus
       outline 0
+      
+.article__separator
+  @extend .container
+  margin 3rem auto
+  height rem(2px)
+  background deep-orange
+  text-align center
+  
+.article__separator__logo
+  position relative
+  transform translateY(-50%)
+  size rem(40px)
+  padding rem(5px)
+  border-radius 50%
+  border 2px solid deep-orange
+  background deep-orange
+      
+.article__comments
+  @extend .container
+  
+  h3  
+    margin-top 0
+    margin-bottom 1.4rem
+    font-weight 700
+    font-size 1.75rem
+
     
 .article__content
   h1
