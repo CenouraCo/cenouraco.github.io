@@ -6,25 +6,27 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <!-- Google Authorship Markup -->
+  <link rel="author" href="https://plus.google.com/113291934652097651956?rel=author">
+
   <!-- Social: Facebook / Open Graph -->
-  <meta property="fb:admins" content="100004567831674">
+  <meta property="fb:admins" content="1611244354" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}blog{% endif %}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}blog{% endif %}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}{{page.image }}">
   {% else %}
-  <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:image" content="{{ "/assets/img/posts/making-of/maina.png" | prepend: site.baseurl | prepend: site.url }}">
   {% endif %}
   <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   {% if page.date %}
-  <meta property="article:author" content="https://www.facebook.com/willian.justen" />
-  <meta property="article:publisher" content="https://www.facebook.com/willian.justen" />
+  <meta property="article:author" content="https://www.facebook.com/sobrenomecoelho" />
+  <meta property="article:publisher" content="https://www.facebook.com/sobrenomecoelho" />
   <meta property="article:published_time" content="{{ page.date }}" />
   {% for tag in page.tags %}
-      <meta property="article:tag" content="{{ tag }}">
+  <meta property="article:tag" content="{{ tag }}">
   {% endfor%}
   {% endif %}
 

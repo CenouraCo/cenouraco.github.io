@@ -4,22 +4,13 @@ title: "Making of"
 title_seo: "Making of 2"
 date: 2015-02-08 22:21:31
 image: '/assets/img/posts/making-of/main.png'
-
-twitter_text: Making of #1
+description: 'How to make my website'
 tags:
-- jekyl
+- jekyll
 - gulp
-- stylus
-- github pages
-- js
-- css
-- stylus
-- do it yourself
-- omg
-- lol
-- haha
-- <3
-- ❤
+- web
+- facebook
+twitter_text: 'How to make your blog'
 ---
 
 ## Introdução
