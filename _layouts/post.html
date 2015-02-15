@@ -1,39 +1,54 @@
----
-layout: default
----
-<article class="article">
+<!DOCTYPE html>
+<html>
 
-  <div class="article__information">
-    <h2 class="article__title" itemprop="name">
-      <a id="inicio" name="inicio" href="{{ page.url | prepend: site.baseurl }}">
-        {{ page.title }}
-      </a>
-    </h2>
-    <time class="article__date" datetime="{{ page.date | date_to_xmlschema }}">
-      {{ page.date | date: "%d %b %Y" }}
-    </time>
+  {% include head.html %}
 
-    <div class="article__content">
-      {{ content }}
-    </div>
+  <body>
+
+    {% include svg-icons.html %}
+
+    {% include header.html %}
     
-    <div class="container">
+      <article class="article">
 
-      <hr>
+        <div class="article__information">
+          <h2 class="article__title" itemprop="name">
+            <a id="inicio" name="inicio" href="{{ page.url | prepend: site.baseurl }}">
+              {{ page.title }}
+            </a>
+          </h2>
+          <time class="article__date" datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%d %b %Y" }}
+          </time>
 
-      <div class="article__tags">
-        {% for tag in page.tags %}
-          <a href="/tags/#{{tag}}">{{ tag }}</a>
-        {% endfor %}
-      </div>
-    </div>
+          <div class="article__content">
+            {{ content }}
+          </div>
+          
+          <div class="container">
 
-    <div class="article__separator">
-      <svg class="article__separator__logo"><use xlink:href="#icon-cenoura-light"></use></svg>
-    </div>
+            <hr>
 
-    {% include share.html%}
+            <div class="article__tags">
+              {% for tag in page.tags %}
+                <a href="/tags/#{{tag}}">{{ tag }}</a>
+              {% endfor %}
+            </div>
+          </div>
 
-    {% include disqus.html%}
-  </div>
-</article>
+          <div class="article__separator">
+            <svg class="article__separator__logo"><use xlink:href="#icon-cenoura-light"></use></svg>
+          </div>
+
+          {% include share.html%}
+
+          {% include disqus.html%}
+        </div>
+      </article>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
+

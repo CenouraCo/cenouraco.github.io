@@ -13,35 +13,34 @@
   <meta property="fb:admins" content="661840920590989" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}blog{% endif %}">
+  {% if page.layout == 'post' %}
+    <meta property="og:type" content="article">
+  {% else %}
+    <meta property="og:type" content="blog">
+  {% endif %}
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{page.image }}">
+    <meta property="og:image" content="{{ site.url }}{{page.image }}">
   {% else %}
-  <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
   {% endif %}
   <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   {% if page.date %}
-  <meta property="article:author" content="https://www.facebook.com/willian.justen" />
-  <meta property="article:publisher" content="https://www.facebook.com/willian.justen" />
-  <meta property="article:published_time" content="{{ page.date }}" />
-  {% for tag in page.tags %}
-  <meta property="article:tag" content="{{ tag }}">
-  {% endfor%}
+    <meta property="article:author" content="https://www.facebook.com/willian.justen" />
+    <meta property="article:publisher" content="https://www.facebook.com/willian.justen" />
+    <meta property="article:published_time" content="{{ page.date }}" />
+    {% for tag in page.tags %}
+      <meta property="article:tag" content="{{ tag }}">
+    {% endfor%}
   {% endif %}
 
   <!-- Google fonts -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=RobotoDraft:300,700,900,100,500,400">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,700,900,100,500,400">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,700,800,900">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,500,700,800,900">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:300,400,700,800,900">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:300,400,700,800,900">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,900,100,500,400">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico:300,400,700,800,900">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:300,400,700,800,900">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:300,400,700,800,900">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,500,700,800,900">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,700,800,900">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ "/assets/img/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
