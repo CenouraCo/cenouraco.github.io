@@ -1,0 +1,49 @@
+---
+layout: default
+title: "#Tags"
+permalink: /tags/index.html
+description: "Procure os assuntos pelas tags."
+---
+
+<div class="tag-cloud">
+  <h1 class="tag-cloud__title">Tags</h1>
+
+  {% assign tags_list = site.tags %}
+    {% if tags_list.first[0] == null %}
+      {% for tag in tags_list %}
+        <a class="tag-cloud__item" data-scroll href="#{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+    {% else %}
+      {% for tag in tags_list %}
+        <a class="tag-cloud__item" data-scroll href="#{{ tag[0] }}">{{ tag[0] }}</a>
+      {% endfor %}
+    {% endif %}
+  {% assign tags_list = nil %}
+</div>
+
+<div class="tag-list">
+  {% for tag in site.tags  %}
+    <h2 class="tag-list__title" id="{{ tag[0] }}">{{ tag[0] }}</h2>
+    <ul class="tag-list__posts">
+      {% assign pages_list = tag[1] %}
+
+      {% for post in pages_list reversed %}
+        {% if post.title != null %}
+          {% if group == null or group == post.group %}
+            <li>
+              <a href="{{ site.url }}{{ post.url }}">
+                <span class="entry-date">
+                  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %b %Y" }}</time>
+                </span>
+                {{ post.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign pages_list = nil %}
+      {% assign group = nil %}
+    </ul>
+  {% endfor %}
+</div>
