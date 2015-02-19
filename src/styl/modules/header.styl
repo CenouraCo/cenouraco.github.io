@@ -1,10 +1,15 @@
 .header
   cf()
-  size 100% 70vh
+  size 100% 80vh
   text-align center
   background url(http://thenextweb.com/conference/assets/img/bg-boost.png)
   +above('md')
-    height 50vh
+    height 65vh
+    
+  @media (max-height: 25rem)
+    height 90vh
+    background blue !important
+  
   
 .header__menu-toggle
   position absolute
