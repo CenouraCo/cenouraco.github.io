@@ -16,7 +16,11 @@
 
   <!-- Social: Facebook / Open Graph -->
   <meta property="fb:admins" content="100004567831674" />
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  {% if page.layout == 'post' %}
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/">
+  {% else %}
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  {% endif %}
 
   {% if page.layout == 'post' %}
     <meta property="og:type" content="article">
@@ -50,6 +54,12 @@
     {% for tag in page.tags %}
       <meta property="article:tag" content="{{ tag }}">
     {% endfor%}
+  {% endif %}
+
+  {% if page.layout == 'post' %}
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}/">
+  {% else %}
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   {% endif %}
 
   <!-- Google fonts -->

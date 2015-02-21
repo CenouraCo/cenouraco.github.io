@@ -141,20 +141,22 @@
     color deep-orange
 
   pre
-    @extend .container
     width 100%
-    counter-reset line-numbering
+    padding 1.8rem
+    background url('../img/general/notepad-line.png')
     border 1px solid grey-300
-    margin 1.75rem auto
-    // background #2d2d2d
-    padding 1.8rem 2rem
-    overflow scroll
+    +above('md')
+      @extend .container
+      margin 1.75rem auto
+      padding 1.8rem 2.8rem
+      overflow auto
     
     > code
-      @extend .container
+      line-height 1.93rem
       font-family font-family-monospace
-      line-height 1.3rem
-      color #333  
+      color #333
+      +above('md')
+        @extend .container
 
   pre a:first-of-type::before
     padding-top 10px
