@@ -13,7 +13,7 @@ tags:
 twitter_text: 'How to make your blog'
 ---
 
-## Introdução
+## Introdução!
 
 Na primeira parte eu passei as tecnologias que eu utilizei e o porquê delas, nessa segunda parte eu vou mostrar o passo a passo para montar o ambiente e criar o seu projeto a partir do zero.
 
@@ -95,7 +95,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 Iremos utilizar o [rbenv](https://github.com/sstephenson/rbenv) que permite trabalhar com diferentes ambientes de Ruby.
 
 {% highlight sh %}
-brew install rbenv ruby-build
+brew install rbenv ruby-build ausdiua hasuhd asuihd asuidh asuhd asiudh asiudh asiudh asdiuhas duash dasuh dasiuhd asiudh asiudha sduahs duiash diuahs diuash daisudh aisudh asiudh asiudh asiudaha sud
 
 # Adicionando o rbenv ao bash para que seja carregado toda vez que abrir o terminal
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile

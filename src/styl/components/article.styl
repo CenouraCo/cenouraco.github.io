@@ -106,7 +106,7 @@
     margin-top 2rem
     margin-bottom 1.4rem
     font-weight 900
-    font-family font-family-serif
+    font-family font-family-sans
     
   h2
     font-size 2rem
@@ -125,32 +125,49 @@
 
   p
     @extend .container
-    margin-bottom 1.25rem
+    margin-bottom 1.6rem
     font-family font-family-sans
     font-family font-family-serif
     font-size 1.3rem
-    font-weight 300
-    line-height 2.4rem
+    font-weight 400
+    line-height 2.5rem
     color black-text
+    color grey-700 !important
     
   a
     text-decoration underline
     
   code
     color deep-orange
-        
+
   pre
+    @extend .container
     width 100%
-    margin 1.75rem 0
-    padding 2.5rem
-    background #2d2d2d
-    color grey-50
+    counter-reset line-numbering
+    border 1px solid grey-300
+    margin 1.75rem auto
+    // background #2d2d2d
+    padding 1.8rem 2rem
+    overflow scroll
     
     > code
       @extend .container
       font-family font-family-monospace
       line-height 1.3rem
-      color grey-50
+      color #333  
+
+  pre a:first-of-type::before
+    padding-top 10px
+  
+
+  pre a:last-of-type::before
+    padding-bottom 10px
+  
+
+  pre a:only-of-type::before
+    padding 10px
+  
+
       
   ul
     @extend .container

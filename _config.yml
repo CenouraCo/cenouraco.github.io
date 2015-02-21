@@ -9,7 +9,8 @@ github_username: grvcoelho
 twitter_username: CenouraCo
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
 permalink: /:title/
 
