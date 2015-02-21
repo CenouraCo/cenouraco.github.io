@@ -5,6 +5,8 @@
   text-align center
   
   a
+    margin-bottom .5rem
+    margin-left .5rem
     background-clip padding-box
     border 2px solid transparent
     border-radius rem(100px)
@@ -14,7 +16,7 @@
     font-family font-family-sans
     letter-spacing 1px
     line-height 1em
-    padding .75rem 2rem
+    padding .6rem 2rem
     text-transform uppercase   
     color white
     &:hover
@@ -22,26 +24,27 @@
       border-color transparent
       color white
       
+    &:first-child
+      margin-left background blue !important
+      
   .share__twitter
-    border-color transparent
-    color white
-    background-image linear-gradient(-108deg, darken(#53abee, 15%), #53abee)
+    border-color #53abee
+    color #53abee
     &:hover
-      background-image linear-gradient(-108deg, #53abee, darken(#53abee, 15%))
-      background-image linear-gradient(-108deg, red, deep-orange)
+      background url(../img/general/orange-background.png)
 
   .share__facebook
-    border-color transparent
-    color white
-    background-image linear-gradient(-108deg, darken(#3b5998, 15%), #3b5998)
+    border-color #3b5998
+    color #3b5998
     &:hover
       background-image linear-gradient(-108deg, #3b5998, darken(#3b5998, 15%))
       background-image linear-gradient(-108deg, red, deep-orange)
+      background url(../img/general/orange-background.png)
 
   .share__google
-    border-color transparent
-    color white
-    background-image linear-gradient(-108deg, darken(#dc4335, 15%), #dc4335)
+    border-color #dc4335
+    color #dc4335
     &:hover
       background-image linear-gradient(-108deg, #dc4335, darken(#dc4335, 15%))
       background-image linear-gradient(-108deg, red, deep-orange)
+      background url(../img/general/orange-background.png)

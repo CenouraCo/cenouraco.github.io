@@ -34,11 +34,18 @@
                 <a href="/tags/#{{tag}}">{{ tag }}</a>
               {% endfor %}
             </div>
+
+            <hr>
+            
           </div>
+
+
+          {% include author.html %}
 
           <div class="article__separator">
             <svg class="article__separator__logo"><use xlink:href="#icon-cenoura-light"></use></svg>
           </div>
+
 
           {% include share.html%}
 
